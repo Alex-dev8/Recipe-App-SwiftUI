@@ -16,6 +16,7 @@
 		FA18149A26FCA12C00CE88B3 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18149926FCA12C00CE88B3 /* RecipeModel.swift */; };
 		FA24893526FCA2BF00226D7E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24893426FCA2BF00226D7E /* DataService.swift */; };
 		FA28C2C526FDFBFA006112BA /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28C2C426FDFBFA006112BA /* RecipeTabView.swift */; };
+		FA4ED86D2700C9EC00CE6107 /* RecipeHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4ED86C2700C9EC00CE6107 /* RecipeHighlights.swift */; };
 		FA62842026FE536C00FA17D2 /* RecipeFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62841F26FE536C00FA17D2 /* RecipeFeaturedView.swift */; };
 		FA851BBE2700843A008BA20D /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA851BBD2700843A008BA20D /* Rational.swift */; };
 		FAC5A97226FCC35400816685 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A97126FCC35400816685 /* RecipeDetailView.swift */; };
@@ -32,8 +33,10 @@
 		FA18149926FCA12C00CE88B3 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		FA24893426FCA2BF00226D7E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		FA28C2C426FDFBFA006112BA /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
+		FA4ED86C2700C9EC00CE6107 /* RecipeHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHighlights.swift; sourceTree = "<group>"; };
 		FA62841F26FE536C00FA17D2 /* RecipeFeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeaturedView.swift; sourceTree = "<group>"; };
 		FA851BBD2700843A008BA20D /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
+		FAA7F2ED2700E98800C1A7DE /* Recipe-List-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Recipe-List-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FAC5A97126FCC35400816685 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +70,7 @@
 		FA18148126FC9EA800CE88B3 /* Recipe List App */ = {
 			isa = PBXGroup;
 			children = (
+				FAA7F2ED2700E98800C1A7DE /* Recipe-List-App-Info.plist */,
 				FA18148226FC9EA800CE88B3 /* Recipe_List_AppApp.swift */,
 				FA18149026FC9ED700CE88B3 /* Views */,
 				FA18149126FC9EDD00CE88B3 /* ViewModels */,
@@ -95,6 +99,7 @@
 				FA62841F26FE536C00FA17D2 /* RecipeFeaturedView.swift */,
 				FA18148426FC9EA800CE88B3 /* RecipeListView.swift */,
 				FAC5A97126FCC35400816685 /* RecipeDetailView.swift */,
+				FA4ED86C2700C9EC00CE6107 /* RecipeHighlights.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			files = (
 				FA18149826FC9FA800CE88B3 /* Recipe.swift in Sources */,
 				FAC5A97226FCC35400816685 /* RecipeDetailView.swift in Sources */,
+				FA4ED86D2700C9EC00CE6107 /* RecipeHighlights.swift in Sources */,
 				FA851BBE2700843A008BA20D /* Rational.swift in Sources */,
 				FA18149A26FCA12C00CE88B3 /* RecipeModel.swift in Sources */,
 				FA18148526FC9EA800CE88B3 /* RecipeListView.swift in Sources */,
@@ -352,6 +358,7 @@
 				DEVELOPMENT_TEAM = 6TKT435P79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Recipe-List-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -382,6 +389,7 @@
 				DEVELOPMENT_TEAM = 6TKT435P79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Recipe-List-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

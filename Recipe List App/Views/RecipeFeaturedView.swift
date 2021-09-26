@@ -11,7 +11,9 @@ struct RecipeFeaturedView: View {
     
     @EnvironmentObject var model:RecipeModel
     @State private var isDetailViewShowing = false
+    @State private var tabSelectionIndex = 0
 
+   
     
     var body: some View {
         
@@ -21,12 +23,12 @@ struct RecipeFeaturedView: View {
                 .bold()
                 .padding(.leading)
                 .padding(.top, 40)
-                .font(.largeTitle)
+                .font(Font.custom("Avenir Heavy", size: 24))
                 
             
             GeometryReader { geo in
             
-            TabView {
+                TabView (selection: $tabSelectionIndex) {
                 
                 // Loop through each recipe
                 ForEach (0..<model.recipes.count) { index in
@@ -51,10 +53,13 @@ struct RecipeFeaturedView: View {
                                         .aspectRatio(contentMode: .fill)
                                         .clipped()
                                     Text(model.recipes[index].name)
+                                        .foregroundColor(.black)
+                                        .font(Font.custom("Avenir", size: 15))
                                         .padding(5)
                                 }
                             }
                         }
+                        .tag(index)
                         .sheet(isPresented: $isDetailViewShowing, content: {
                             RecipeDetailView(recipe: model.recipes[index])
                         })
@@ -75,15 +80,28 @@ struct RecipeFeaturedView: View {
             VStack (alignment: .leading, spacing: 10) {
                 
                 Text("Preparation Time:")
-                    .font(.headline)
-                Text("1 hour")
+                    .font(Font.custom("Avenir Heavy", size: 16))
+                Text(model.recipes[tabSelectionIndex].prepTime)
+                    .font(Font.custom("Avenir", size: 15))
                 
                 Text("Highlights")
-                    .font(.headline)
-                Text("Healthy, Hearty")
+                    .font(Font.custom("Avenir Heavy", size: 16))
+                RecipeHighlights(highlights: model.recipes[tabSelectionIndex].highlights)
             }
             .padding([.leading, .bottom])
         }
+        .onAppear {
+            setFeaturedIndex()
+        }
+    }
+    
+    func setFeaturedIndex() {
+        
+        // find the first recipe that is featured
+        let index = model.recipes.firstIndex { (recipe) -> Bool in
+            return recipe.featured
+        }
+        tabSelectionIndex = index ?? 0
     }
 }
 
